@@ -1,4 +1,4 @@
-import type { DesignTokens, Registry, RegistryItem } from '@franken-ui/core';
+import type { DesignTokens, Registry, RegistryItem } from '@repo/core';
 
 /**
  * Build a registry.json from forge project data

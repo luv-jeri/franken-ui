@@ -1,4 +1,4 @@
-import type { Animation } from '@franken-ui/core';
+import type { Animation } from '@repo/core';
 
 /**
  * Generate CSS keyframes from animation definitions

@@ -1,5 +1,5 @@
 import JSZip from 'jszip';
-import type { DesignTokens, Registry, RegistryItem } from '@franken-ui/core';
+import type { DesignTokens, Registry, RegistryItem } from '@repo/core';
 import { generateThemeCSS } from './css-generator';
 import { buildRegistry, buildStyleItem } from './registry-builder';
 

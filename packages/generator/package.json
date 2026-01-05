@@ -1,5 +1,5 @@
 {
-    "name": "@franken-ui/generator",
+    "name": "@repo/generator",
     "version": "0.0.1",
     "private": true,
     "main": "./src/index.ts",
@@ -15,8 +15,8 @@
         "lint": "eslint ."
     },
     "devDependencies": {
-        "@franken-ui/eslint-config": "workspace:*",
-        "@franken-ui/typescript-config": "workspace:*",
+        "@repo/eslint-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
         "@types/babel__generator": "^7.27.0",
         "@types/babel__traverse": "^7.20.7",
         "typescript": "^5.8.3"
@@ -26,8 +26,8 @@
         "@babel/parser": "^7.27.5",
         "@babel/traverse": "^7.27.5",
         "@babel/types": "^7.27.6",
-        "@franken-ui/core": "workspace:*",
-        "@franken-ui/base-library": "workspace:*",
+        "@repo/core": "workspace:*",
+        "@repo/base-library": "workspace:*",
         "jszip": "^3.10.1"
     }
 }

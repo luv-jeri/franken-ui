@@ -1,5 +1,5 @@
 {
-    "name": "@franken-ui/core",
+    "name": "@repo/core",
     "version": "0.0.1",
     "private": true,
     "main": "./src/index.ts",
@@ -14,11 +14,11 @@
         "lint": "eslint ."
     },
     "devDependencies": {
-        "@franken-ui/eslint-config": "workspace:*",
-        "@franken-ui/typescript-config": "workspace:*",
+        "@repo/eslint-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
         "typescript": "^5.8.3"
     },
     "dependencies": {
-        "zod": "^3.25.67"
+        "zod": "^3.24.0"
     }
 }

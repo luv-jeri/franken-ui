@@ -1,7 +1,7 @@
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import type { ComponentCustomization } from '@franken-ui/core';
+import type { ComponentCustomization } from '@repo/core';
 
 /**
  * Transform a component's source code based on customizations

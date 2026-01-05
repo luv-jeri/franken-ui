@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { DesignTokensSchema, type DesignTokens, type ComponentCustomization } from '@franken-ui/core';
+import { DesignTokensSchema, type DesignTokens, type ComponentCustomization } from '@repo/core';
 import { DESIGN_SYSTEM_PROMPT, COMPONENT_CUSTOMIZATION_PROMPT } from './prompts';
 
 let openai: OpenAI | null = null;

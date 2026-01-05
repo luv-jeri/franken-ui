@@ -1,4 +1,4 @@
-import type { DesignTokens } from '@franken-ui/core';
+import type { DesignTokens } from '@repo/core';
 
 /**
  * Generate theme.css from design tokens
