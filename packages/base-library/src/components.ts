@@ -1,0 +1,313 @@
+/**
+ * List of components available in the base library
+ * These will be pulled from shadcn/ui and stored locally
+ */
+export const AVAILABLE_COMPONENTS = [
+    'accordion',
+    'alert',
+    'alert-dialog',
+    'avatar',
+    'badge',
+    'button',
+    'calendar',
+    'card',
+    'checkbox',
+    'collapsible',
+    'command',
+    'context-menu',
+    'dialog',
+    'dropdown-menu',
+    'form',
+    'hover-card',
+    'input',
+    'label',
+    'menubar',
+    'navigation-menu',
+    'popover',
+    'progress',
+    'radio-group',
+    'scroll-area',
+    'select',
+    'separator',
+    'sheet',
+    'skeleton',
+    'slider',
+    'switch',
+    'table',
+    'tabs',
+    'textarea',
+    'toast',
+    'toggle',
+    'tooltip',
+] as const;
+
+export type ComponentName = (typeof AVAILABLE_COMPONENTS)[number];
+
+/**
+ * Component metadata
+ */
+export interface ComponentMeta {
+    name: ComponentName;
+    displayName: string;
+    dependencies: string[];
+    registryDependencies: string[];
+    description: string;
+}
+
+/**
+ * Component metadata registry
+ */
+export const COMPONENT_META: Record<ComponentName, ComponentMeta> = {
+    accordion: {
+        name: 'accordion',
+        displayName: 'Accordion',
+        dependencies: ['@radix-ui/react-accordion'],
+        registryDependencies: [],
+        description: 'A vertically stacked set of interactive headings.',
+    },
+    alert: {
+        name: 'alert',
+        displayName: 'Alert',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'Displays a callout for user attention.',
+    },
+    'alert-dialog': {
+        name: 'alert-dialog',
+        displayName: 'Alert Dialog',
+        dependencies: ['@radix-ui/react-alert-dialog'],
+        registryDependencies: ['button'],
+        description: 'A modal dialog that interrupts the user.',
+    },
+    avatar: {
+        name: 'avatar',
+        displayName: 'Avatar',
+        dependencies: ['@radix-ui/react-avatar'],
+        registryDependencies: [],
+        description: 'An image element with a fallback.',
+    },
+    badge: {
+        name: 'badge',
+        displayName: 'Badge',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'Displays a badge or a label.',
+    },
+    button: {
+        name: 'button',
+        displayName: 'Button',
+        dependencies: ['@radix-ui/react-slot'],
+        registryDependencies: [],
+        description: 'Displays a button or a component that looks like a button.',
+    },
+    calendar: {
+        name: 'calendar',
+        displayName: 'Calendar',
+        dependencies: ['react-day-picker'],
+        registryDependencies: ['button'],
+        description: 'A date field component with calendar.',
+    },
+    card: {
+        name: 'card',
+        displayName: 'Card',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'Displays a card with header, content, and footer.',
+    },
+    checkbox: {
+        name: 'checkbox',
+        displayName: 'Checkbox',
+        dependencies: ['@radix-ui/react-checkbox'],
+        registryDependencies: [],
+        description: 'A control that allows the user to toggle between checked and not checked.',
+    },
+    collapsible: {
+        name: 'collapsible',
+        displayName: 'Collapsible',
+        dependencies: ['@radix-ui/react-collapsible'],
+        registryDependencies: [],
+        description: 'An interactive component which expands/collapses a panel.',
+    },
+    command: {
+        name: 'command',
+        displayName: 'Command',
+        dependencies: ['cmdk'],
+        registryDependencies: ['dialog'],
+        description: 'Fast, composable command menu for React.',
+    },
+    'context-menu': {
+        name: 'context-menu',
+        displayName: 'Context Menu',
+        dependencies: ['@radix-ui/react-context-menu'],
+        registryDependencies: [],
+        description: 'Displays a menu to the user — such as a set of actions.',
+    },
+    dialog: {
+        name: 'dialog',
+        displayName: 'Dialog',
+        dependencies: ['@radix-ui/react-dialog'],
+        registryDependencies: [],
+        description: 'A modal dialog that interrupts the user.',
+    },
+    'dropdown-menu': {
+        name: 'dropdown-menu',
+        displayName: 'Dropdown Menu',
+        dependencies: ['@radix-ui/react-dropdown-menu'],
+        registryDependencies: [],
+        description: 'Displays a menu to the user — such as a set of actions.',
+    },
+    form: {
+        name: 'form',
+        displayName: 'Form',
+        dependencies: ['react-hook-form', '@hookform/resolvers', 'zod'],
+        registryDependencies: ['label'],
+        description: 'Building forms with React Hook Form and Zod.',
+    },
+    'hover-card': {
+        name: 'hover-card',
+        displayName: 'Hover Card',
+        dependencies: ['@radix-ui/react-hover-card'],
+        registryDependencies: [],
+        description: 'For sighted users to preview content behind a link.',
+    },
+    input: {
+        name: 'input',
+        displayName: 'Input',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'Displays a form input field.',
+    },
+    label: {
+        name: 'label',
+        displayName: 'Label',
+        dependencies: ['@radix-ui/react-label'],
+        registryDependencies: [],
+        description: 'Renders an accessible label associated with controls.',
+    },
+    menubar: {
+        name: 'menubar',
+        displayName: 'Menubar',
+        dependencies: ['@radix-ui/react-menubar'],
+        registryDependencies: [],
+        description: 'A visually persistent menu common in desktop applications.',
+    },
+    'navigation-menu': {
+        name: 'navigation-menu',
+        displayName: 'Navigation Menu',
+        dependencies: ['@radix-ui/react-navigation-menu'],
+        registryDependencies: [],
+        description: 'A collection of links for navigating websites.',
+    },
+    popover: {
+        name: 'popover',
+        displayName: 'Popover',
+        dependencies: ['@radix-ui/react-popover'],
+        registryDependencies: [],
+        description: 'Displays rich content in a portal.',
+    },
+    progress: {
+        name: 'progress',
+        displayName: 'Progress',
+        dependencies: ['@radix-ui/react-progress'],
+        registryDependencies: [],
+        description: 'Displays an indicator showing the completion progress.',
+    },
+    'radio-group': {
+        name: 'radio-group',
+        displayName: 'Radio Group',
+        dependencies: ['@radix-ui/react-radio-group'],
+        registryDependencies: [],
+        description: 'A set of checkable buttons—where only one can be checked at a time.',
+    },
+    'scroll-area': {
+        name: 'scroll-area',
+        displayName: 'Scroll Area',
+        dependencies: ['@radix-ui/react-scroll-area'],
+        registryDependencies: [],
+        description: 'Augments native scroll functionality.',
+    },
+    select: {
+        name: 'select',
+        displayName: 'Select',
+        dependencies: ['@radix-ui/react-select'],
+        registryDependencies: [],
+        description: 'Displays a list of options for the user to pick from.',
+    },
+    separator: {
+        name: 'separator',
+        displayName: 'Separator',
+        dependencies: ['@radix-ui/react-separator'],
+        registryDependencies: [],
+        description: 'Visually or semantically separates content.',
+    },
+    sheet: {
+        name: 'sheet',
+        displayName: 'Sheet',
+        dependencies: ['@radix-ui/react-dialog'],
+        registryDependencies: [],
+        description: 'Extends Dialog to display content that slides in from the edge.',
+    },
+    skeleton: {
+        name: 'skeleton',
+        displayName: 'Skeleton',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'Use to show a placeholder while content is loading.',
+    },
+    slider: {
+        name: 'slider',
+        displayName: 'Slider',
+        dependencies: ['@radix-ui/react-slider'],
+        registryDependencies: [],
+        description: 'An input where the user selects a value from within a given range.',
+    },
+    switch: {
+        name: 'switch',
+        displayName: 'Switch',
+        dependencies: ['@radix-ui/react-switch'],
+        registryDependencies: [],
+        description: 'A control that allows the user to toggle between checked and not checked.',
+    },
+    table: {
+        name: 'table',
+        displayName: 'Table',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'A responsive table component.',
+    },
+    tabs: {
+        name: 'tabs',
+        displayName: 'Tabs',
+        dependencies: ['@radix-ui/react-tabs'],
+        registryDependencies: [],
+        description: 'A set of layered sections of content.',
+    },
+    textarea: {
+        name: 'textarea',
+        displayName: 'Textarea',
+        dependencies: [],
+        registryDependencies: [],
+        description: 'Displays a form textarea.',
+    },
+    toast: {
+        name: 'toast',
+        displayName: 'Toast',
+        dependencies: ['sonner'],
+        registryDependencies: [],
+        description: 'A succinct message that is displayed temporarily.',
+    },
+    toggle: {
+        name: 'toggle',
+        displayName: 'Toggle',
+        dependencies: ['@radix-ui/react-toggle'],
+        registryDependencies: [],
+        description: 'A two-state button that can be either on or off.',
+    },
+    tooltip: {
+        name: 'tooltip',
+        displayName: 'Tooltip',
+        dependencies: ['@radix-ui/react-tooltip'],
+        registryDependencies: [],
+        description: 'A popup that displays information related to an element.',
+    },
+};

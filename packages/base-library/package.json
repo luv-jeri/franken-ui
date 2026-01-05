@@ -1,0 +1,27 @@
+{
+    "name": "@franken-ui/base-library",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": "./src/index.ts",
+        "./registry": "./registry/index.ts",
+        "./components": "./src/components.ts"
+    },
+    "scripts": {
+        "build": "tsc",
+        "check-types": "tsc --noEmit",
+        "lint": "eslint .",
+        "sync": "tsx scripts/sync-from-shadcn.ts"
+    },
+    "devDependencies": {
+        "@franken-ui/eslint-config": "workspace:*",
+        "@franken-ui/typescript-config": "workspace:*",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "@franken-ui/core": "workspace:*"
+    }
+}
